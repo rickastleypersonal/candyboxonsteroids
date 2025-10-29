@@ -13,10 +13,10 @@ var farm = {
     // Functions
     calculateLollipopsPerDay : function(){
         if(this.lollipopsPlanted <= 293){ // sqrt(86400) = 293
-            this.lollipopsPerDay = Math.pow(this.lollipopsPlanted, 2); // 293 will give 85849
+            this.lollipopsPerDay = Math.pow(this.lollipopsPlanted, 3); // 293 will give 85849
         }
         else{ // When we're counting in lp/sec, this function is used instead of the other one. It will stabilize the curve.
-            var prod = (this.lollipopsPlanted - 122) * 500; // 194 will give 86000
+            var prod = (this.lollipopsPlanted - 50) * 3000; // 194 will give 86000
             if(prod < this.maxLollipopsPerDay) this.lollipopsPerDay = prod;
             else this.lollipopsPerDay = this.maxLollipopsPerDay;
         }
