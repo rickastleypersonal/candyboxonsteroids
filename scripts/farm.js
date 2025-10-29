@@ -5,18 +5,18 @@ var farm = {
     productionDelayType : "none", // On which delay does the farm product lollipops (day, hour, min, sec...)
     lollipopsPerDay : 0, // How many lollipops the farm produce every day
     lollipopsProduction : 0, // How many lollipops the farm produce every day, hour, min, sec.. depending on the production delay type
-    maxLollipopsPerDay : 8640000, // = 100/sec
+    maxLollipopsPerDay : 8640000000, // = 100000/sec
     flagsList : [" ~ ", " * ", "cnd", " ! ", " + ", " ? ", "/|\\"], // List of ascii flags which can appear on the farm
     currentFlagIndex : 0, // Index in the list of the current flag shown
     plantingButtonsStep : 0, // Step of the lollipops planting buttons : (= which buttons are shown, 1000, 100.. ?)
     
     // Functions
     calculateLollipopsPerDay : function(){
-        if(this.lollipopsPlanted <= 293){ // sqrt(86400) = 293
+        if(this.lollipopsPlanted <= 44){ // sqrt(86400) = 293
             this.lollipopsPerDay = Math.pow(this.lollipopsPlanted, 3); // 293 will give 85849
         }
         else{ // When we're counting in lp/sec, this function is used instead of the other one. It will stabilize the curve.
-            var prod = (this.lollipopsPlanted - 50) * 3000; // 194 will give 86000
+            var prod = (this.lollipopsPlanted - 20) * 600; // 194 will give 86000
             if(prod < this.maxLollipopsPerDay) this.lollipopsPerDay = prod;
             else this.lollipopsPerDay = this.maxLollipopsPerDay;
         }
