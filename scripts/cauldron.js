@@ -345,7 +345,7 @@ var cauldron = {
         
         // We change on the page
         if(this.weAreMixing){
-            if(this.actionTimer < 60){
+            if(this.actionTimer < 30){
                 // If we just began mixing or we're mixing something
                 if(this.actionTimer < 5 || (this.candiesInTheCauldron != 0 || this.lollipopsInTheCauldron != 0)){
                     // We show the timer
