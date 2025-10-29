@@ -388,7 +388,7 @@ var quest = {
         potions.updateOnPage();
         
         // We're tired after this quest
-        if(this.things[index].hp < this.things[index].max_hp) this.setTiredFound(this.tiredFound + 200 * (1 - (this.things[index].hp / this.things[index].max_hp)));
+        if(this.things[index].hp < this.things[index].max_hp) this.setTiredFound(this.tiredFound + 10 * (1 - (this.things[index].hp / this.things[index].max_hp)));
         if(this.escaping == false) this.setTiredTime(Math.floor(this.tiredFound));
         
         // Nothing found anymore
@@ -424,7 +424,7 @@ var quest = {
     },
     
     makeBasicChest : function(){
-        return land.createMob("CHS", 80, 80, "none", "A chest !! Very rare.", [drops.createDrop("candies", 300 + random.getRandomIntUpTo(500)), drops.createDrop("object", "key", true), drops.createDrop("object", "boots", random.oneChanceOutOf(3)), drops.createDrop("object", "swampMap", random.oneChanceOutOf(3)), drops.createDrop("object", "hutMap", random.oneChanceOutOf(3))]);
+        return land.createMob("CHS", 12, 12, "none", "A chest !! Very rare.", [drops.createDrop("candies", 300 + random.getRandomIntUpTo(500)), drops.createDrop("object", "key", true), drops.createDrop("object", "boots", random.oneChanceOutOf(3)), drops.createDrop("object", "swampMap", random.oneChanceOutOf(3)), drops.createDrop("object", "hutMap", random.oneChanceOutOf(3))]);
     },
     
     makeOpenChest : function(){
