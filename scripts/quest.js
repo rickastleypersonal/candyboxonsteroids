@@ -129,10 +129,10 @@ var quest = {
     },
     
     getSpeed : function(){
-        if(objects.list.boots.have && this.berserk) return 125;
-        if(objects.list.boots.have || this.berserk) return 250;
+        if(objects.list.boots.have && this.berserk) return 38;
+        if(objects.list.boots.have || this.berserk) return 75;
         
-        return 500;
+        return 150;
     },
     
     getCharacterIndex : function(){
