@@ -1,7 +1,7 @@
 var peacefulForest = {
     
     // Variables
-    basicChestProbability : 100,
+    basicChestProbability : 2,
     poniesEncountered : 0,
     
     // Functions
@@ -45,17 +45,17 @@ var peacefulForest = {
         for(var i = 1; i < quest.things.length; i++){
             if(random.flipACoin()){
                 // 1 chance out of x we spawn a wood poney !!!! (if we didn't already add one)
-                if(random.oneChanceOutOf(300) && addedAPoney == false){
+                if(random.oneChanceOutOf(20) && addedAPoney == false){
                     addedAPoney = true;
                     quest.things[i] = this.makeWoodPoney();
                 }
                 // 1 chance out of x we spawn a CHS (chest !!)
                 else if(random.oneChanceOutOf(this.basicChestProbability)){
-                    this.setBasicChestProbability(this.basicChestProbability + 50);
+                    this.setBasicChestProbability(this.basicChestProbability + 1);
                     quest.things[i] = quest.makeBasicChest();
                 }
                 // Else we spawn a tree
-                else quest.things[i] = land.createMob("|||", 5, 5, "none", "A tree. It sometimes drops a candy.", [drops.createDrop("candies", random.getRandomIntUpTo(1)), drops.createDrop("object", "key", random.oneChanceOutOf(2))]);
+                else quest.things[i] = land.createMob("|||", 5, 5, "none", "A tree. It drops tons of candy.", [drops.createDrop("candies", random.getRandomIntUpTo(50)), drops.createDrop("object", "key", random.oneChanceOutOf(1))]);
             }
         }
         
