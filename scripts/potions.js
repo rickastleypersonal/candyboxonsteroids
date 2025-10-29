@@ -5,8 +5,8 @@ var potions = {
   
     // Functions
     getCountdown : function(){
-        if(objects.list.magicianHat.have) return 12;
-        return 20;
+        if(objects.list.magicianHat.have) return 6;
+        return 10;
     },
     
     onload : function(){
