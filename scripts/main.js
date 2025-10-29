@@ -58,13 +58,13 @@ var main = {
     oneTenthSecInterval : function(){
         // We try to convert candies into lollipops
         candiesConverter.convert();
-    },
 
-    secInterval : function(){
-        // Candies
+		// Candies
         if(objects.list.oldAmulet.have == false) candies.setNbrOwned(candies.nbrOwned + candies.candiesPerSecond);
         else candies.setNbrOwned(candies.nbrOwned + candies.candiesPerSecond*3);
-        
+    },
+
+    secInterval : function(){     
         // Quest tired time
         if(objects.list.pinkRing.have == false) quest.setTiredTime(quest.tiredTime - 1);
         else quest.setTiredTime(quest.tiredTime - 2);
