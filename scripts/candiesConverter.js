@@ -38,8 +38,8 @@ var candiesConverter = {
             lollipops.setNbrOwned(lollipops.nbrOwned + howMany);
             
             // We increment the speed
-            if(this.speed < 10000) this.speed += 1;
-            else this.speed *= 2;
+            if(this.speed < 6000) this.speed += 10;
+            else this.speed *= 1.1;
         }
         // Else
         else{
