@@ -151,7 +151,7 @@ var quest = {
                         // If we're the character
                         if(this.things[index].type == "character"){
                             // We set a timeout to the winning function and we return
-                            window.setTimeout(this.won.bind(this), 3000);
+                            window.setTimeout(this.won.bind(this), 1000);
                             return;
                         }
                         // Else, we're just an ally or a trap
