@@ -83,7 +83,6 @@ var cookie = {
 					":" + getPhpStuff(objects.list.magicalHorn.have) +
 					":" + getPhpStuff(objects.list.hornOfPlenty.have) +
 					":" + getPhpStuff(objects.list.oldAmulet.have) +
-					":" + getPhpStuff(objects.list.crownOfCalm.have) +
 					":" + getPhpStuff(potions.list.health.shown) +
 					":" + getPhpStuff(potions.list.escape.shown) +
 					":" + getPhpStuff(potions.list.berserk.shown) +
@@ -126,6 +125,7 @@ var cookie = {
 					":" + wishingWell.step +
 					":" + getPhpStuff(yourself.canSurpass) +
 					":" + getPhpStuff(developperComputer.won);
+					":" + getPhpStuff(objects.list.crownOfCalm.have) +
 		
 	},
 	
@@ -262,7 +262,7 @@ var cookie = {
         objects.setHaveObject("magicalHorn", setPhpStuff(Number(var_list[45])));
         objects.setHaveObject("hornOfPlenty", setPhpStuff(Number(var_list[46])));
         objects.setHaveObject("oldAmulet", setPhpStuff(Number(var_list[47])));
-		objects.setHaveObject("crownOfCalm", setPhpStuff(Number(var_list[47])));
+		objects.setHaveObject("crownOfCalm", setPhpStuff(Number(var_list[91])));
 		
 		//
 		potions.setPotionShown(potions.list.impInvocationScroll, setPhpStuff(Number(var_list[55]))); potions.setPotionShown(potions.list.earthquakeScroll, setPhpStuff(Number(var_list[54]))); potions.setPotionShown(potions.list.teleportScroll, setPhpStuff(Number(var_list[53]))); potions.setPotionShown(potions.list.fireScroll, setPhpStuff(Number(var_list[51]))); potions.setPotionShown(potions.list.acidRainScroll, setPhpStuff(Number(var_list[52]))); potions.updateOnPage();
