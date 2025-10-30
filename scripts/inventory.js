@@ -152,10 +152,10 @@ var inventory = {
    \'. .\'",
 
     asciiCrownOfCalm : "       \n\
-      _.+._\n\
-    (^\\/^\\/^)\n\
-     \\@*@*@/\n\
-     {_____}",
+   _.+._\n\
+ (^\\/^\\/^)\n\
+  \\@*@*@/\n\
+  {_____}",
    
     asciiWon2 : "Bravo !\nYou won\nthe game :)\nYou now have\nall the\ncandies in\nthe world.",
    
