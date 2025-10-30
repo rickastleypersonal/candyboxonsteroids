@@ -94,7 +94,7 @@ While you walk through the swamp,\n\
 following your map...\
 ");
                 this.step = 1;
-                window.setTimeout(this.updateOnPage.bind(this), 3500);
+                window.setTimeout(this.updateOnPage.bind(this), 1000);
             break;
             case 1:
                 htmlInteraction.setInnerHtml("map", "\
@@ -105,7 +105,7 @@ On the horizon, you see a\n\
             ^^~~^^\
 ");
                 this.step = 2;
-                window.setTimeout(this.updateOnPage.bind(this), 3500);
+                window.setTimeout(this.updateOnPage.bind(this), 1000);
             break;
             case 2:
                 htmlInteraction.setInnerHtml("map", "\
@@ -119,7 +119,7 @@ It is coming_    _\n\
           ~~  ~~  ~~\
 ");
                 this.step = 3;
-                window.setTimeout(this.updateOnPage.bind(this), 3500);
+                window.setTimeout(this.updateOnPage.bind(this), 1000);
             break;
             case 3:
                 htmlInteraction.setInnerHtml("map", "\
@@ -135,7 +135,7 @@ It is coming_    _\n\
        (_(_)_)   (_(_)_)\
 ");
                 this.step = 4;
-                window.setTimeout(this.updateOnPage.bind(this), 3500);
+                window.setTimeout(this.updateOnPage.bind(this), 1500);
             break;
             default:
                 this.updateOnPageFinalFrog();
