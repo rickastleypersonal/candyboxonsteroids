@@ -43,9 +43,9 @@ var inventory = {
         this.updateObjectOnPage("inventory_magical_horn", objects.list.magicalHorn, this.asciiMagicalHorn, this.asciiNoObject);
         this.updateObjectOnPage("inventory_horn_of_plenty", objects.list.hornOfPlenty, this.asciiHornOfPlenty, this.asciiNoObject);
         this.updateObjectOnPage("inventory_old_amulet", objects.list.oldAmulet, this.asciiOldAmulet, this.asciiNoObject);
+        this.updateObjectOnPage("inventory_crown_of_calm", objects.list.crownOfCalm, this.asciiCrownOfCalm, this.asciiNoObject);
         
         if(developperComputer.won){
-            htmlInteraction.setInnerHtml("inventory_won1", "<pre>" + this.asciiWon1 + "</pre>");
             htmlInteraction.setInnerHtml("inventory_won2", "<pre>" + this.asciiWon2 + "</pre>");
             htmlInteraction.showButton("hardmode");
         }
@@ -151,10 +151,15 @@ var inventory = {
     .^.\n\
    \'cnd\'\n\
    \'. .\'",
+
+    asciiCrownOfCalm : "       \n\
+      _.+._\n\
+    (^\/^\/^)\n\
+     \@*@*@/\n\
+     {_____}",
    
-    asciiWon1 : "Bravo !\nYou won\nthe game :)\nYou now have\nall the\ncandies in\nthe world.",
+    asciiWon2 : "Bravo !\nYou won\nthe game :)\nYou now have\nall the\ncandies in\nthe world.",
    
-    asciiWon2 : "(you can now\nask the dev\nfor a real\ncandy, if you\nfind him !)",
    
     asciiNoObject : "            \n            \n            "
 
