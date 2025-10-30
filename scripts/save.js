@@ -72,6 +72,7 @@ function save() {
 					"objectsHaveObjectMagicalHorn: " + getPhpStuff(objects.list.magicalHorn.have) + "\n" + 
 					"objectsHaveObjectHornOfPlenty: " + getPhpStuff(objects.list.hornOfPlenty.have) + "\n" + 
 					"objectsHaveObjectOldAmulet: " + getPhpStuff(objects.list.oldAmulet.have) + "\n" + 
+					"objectsHaveObjectCrownOfCalm: " + getPhpStuff(objects.list.crownOfCalm.have) + "\n" + 
 					"potionsShownHealth: " + getPhpStuff(potions.list.health.shown) + "\n" + 
 					"potionsShownEscape: " + getPhpStuff(potions.list.escape.shown) + "\n" + 
 					"potionsShownBerserk: " + getPhpStuff(potions.list.berserk.shown) + "\n" + 
