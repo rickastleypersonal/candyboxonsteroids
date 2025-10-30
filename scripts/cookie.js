@@ -124,8 +124,8 @@ var cookie = {
 					":" + wishingWell.speech +
 					":" + wishingWell.step +
 					":" + getPhpStuff(yourself.canSurpass) +
-					":" + getPhpStuff(developperComputer.won);
-					":" + getPhpStuff(objects.list.crownOfCalm.have) +
+					":" + getPhpStuff(developperComputer.won) +
+					":" + getPhpStuff(objects.list.crownOfCalm.have);
 		
 	},
 	
