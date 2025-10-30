@@ -83,6 +83,7 @@ var cookie = {
 					":" + getPhpStuff(objects.list.magicalHorn.have) +
 					":" + getPhpStuff(objects.list.hornOfPlenty.have) +
 					":" + getPhpStuff(objects.list.oldAmulet.have) +
+					":" + getPhpStuff(objects.list.crownOfCalm.have) +
 					":" + getPhpStuff(potions.list.health.shown) +
 					":" + getPhpStuff(potions.list.escape.shown) +
 					":" + getPhpStuff(potions.list.berserk.shown) +
@@ -135,7 +136,7 @@ var cookie = {
 		var payload = cookie.readCookie("CandyCookie");
 		var_list = payload.split(":");
 
-		if(var_list.length != 90)
+		if(var_list.length != 91)
 		{
 			alert("ERROR: Corrupt Candycookie Length:" + var_list.length);
 			console.log("ERROR: Corrupt Candycookie Length:" + var_list.length); 
@@ -261,6 +262,7 @@ var cookie = {
         objects.setHaveObject("magicalHorn", setPhpStuff(Number(var_list[45])));
         objects.setHaveObject("hornOfPlenty", setPhpStuff(Number(var_list[46])));
         objects.setHaveObject("oldAmulet", setPhpStuff(Number(var_list[47])));
+		objects.setHaveObject("crownOfCalm", setPhpStuff(Number(var_list[47])));
 		
 		//
 		potions.setPotionShown(potions.list.impInvocationScroll, setPhpStuff(Number(var_list[55]))); potions.setPotionShown(potions.list.earthquakeScroll, setPhpStuff(Number(var_list[54]))); potions.setPotionShown(potions.list.teleportScroll, setPhpStuff(Number(var_list[53]))); potions.setPotionShown(potions.list.fireScroll, setPhpStuff(Number(var_list[51]))); potions.setPotionShown(potions.list.acidRainScroll, setPhpStuff(Number(var_list[52]))); potions.updateOnPage();
