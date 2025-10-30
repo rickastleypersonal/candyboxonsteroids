@@ -499,6 +499,7 @@ var cauldron = {
         && lastLastAc.type == "mix" // Last last action was mixing
         /* LAST LAST LAST ACTION */
         && lastLastLastAc.type == "boil" // Last last last action was boiling
+        && lastLastLastAc.nbrCandies > 0 // We boiled at least one candy
         && lastLastLastAc.nbrLollipops > 0 // We boiled at least one lollipop
         && lastLastLastAc.nbrLollipops % 10000 == 0 // The lollipops we boiled were a multiple of 10000
         && lastLastLastAc.timer >= 15 && lastLastLastAc.timer < 32 // It was boiling when we stopped boiling
