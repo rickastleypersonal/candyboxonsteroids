@@ -72,7 +72,6 @@ function save() {
 					"objectsHaveObjectMagicalHorn: " + getPhpStuff(objects.list.magicalHorn.have) + "\n" + 
 					"objectsHaveObjectHornOfPlenty: " + getPhpStuff(objects.list.hornOfPlenty.have) + "\n" + 
 					"objectsHaveObjectOldAmulet: " + getPhpStuff(objects.list.oldAmulet.have) + "\n" + 
-					"objectsHaveObjectCrownOfCalm: " + getPhpStuff(objects.list.crownOfCalm.have) + "\n" + 
 					"potionsShownHealth: " + getPhpStuff(potions.list.health.shown) + "\n" + 
 					"potionsShownEscape: " + getPhpStuff(potions.list.escape.shown) + "\n" + 
 					"potionsShownBerserk: " + getPhpStuff(potions.list.berserk.shown) + "\n" + 
@@ -114,9 +113,10 @@ function save() {
 					"wishingWellSpeech: " + wishingWell.speech + "\n" + 
 					"wishingWellStep: " + wishingWell.step + "\n" + 
 					"yourselfCanSurpass: " + getPhpStuff(yourself.canSurpass) + "\n" + 
-					"developperComputerWon: " + getPhpStuff(developperComputer.won);
+					"developperComputerWon: " + getPhpStuff(developperComputer.won) + "\n" + 
+					"objectsHaveObjectCrownOfCalm: " + getPhpStuff(objects.list.crownOfCalm.have);
 	
-	var filename = "candybox_" + year.substring(2, 4) + month + day + "_" + hour + "-" + min;
+	var filename = "candyboxonsteroids_" + year.substring(2, 4) + "y" + month + "m" + day + "d" + hour + "h" + min + "m";
 	var blob = new Blob([save_text], {type: "text/plain;charset=utf-8"});
 	saveAs(blob, filename+".cs");
 }
