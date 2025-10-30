@@ -15,7 +15,8 @@ var objects = {
         cauldron : {have:false, found:false, text:"a big container", name:"A cauldron.", description:"This cauldron allows you to brew a large variety of potions, using raw, common materials like candies or lollipops."},
         magicalHorn : {have:false, found:false, text:"a horn", name:"A magical horn.", description:"This magical horn belonged to a unicorn. Carrying it will make you regain health points continuously during a quest !"},
         hornOfPlenty : {have:false, found:false, text:"a horn", name:"The horn of plenty.", description:"The horn of plenty, stolen from Ploutos by the cow king, who thought it was a real horn. This mythical object will multiply by three your lollipop farm production."},
-        oldAmulet : {have:false, found:false, text:"an amulet", name:"An old amulet.", description:"This old amulet, found on the corpse of a dead warrior, is known to bring prosperity to its owner. It will multiply by three your candies production."}
+        oldAmulet : {have:false, found:false, text:"an amulet", name:"An old amulet.", description:"This old amulet, found on the corpse of a dead warrior, is known to bring prosperity to its owner. It will multiply by three your candies production."},
+        crownOfCalm : {have:false, found:false, text:"a crown", name:"The crown of calm.", description:"The crown of calm, found on display near the entrance of the castle. It will allow you to choose to slow down your quests."}
     },
     
     leave : function(){
