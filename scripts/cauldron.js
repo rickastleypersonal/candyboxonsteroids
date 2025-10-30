@@ -484,6 +484,29 @@ var cauldron = {
             potions.getPotions(potions.list.turtle, Math.floor(lastAc.nbrLollipops/20000)); // We add the potions to our stock
             resultsList.push({type:"turtle", nbr:Math.floor(lastAc.nbrLollipops/20000)}); // We add the result to the list
         }
+
+        // Check for beserk potion
+        if(
+        /* LAST ACTION */
+        lastAc.type == "boil" // Last action was boiling
+        && lastAc.nbrCandies > 0 // We boiled at least one candy
+        && lastAc.nbrLollipops > 0 // We boiled at least one lollipop
+        && lastAc.nbrLollipops % 20000 == 0 // The lollipops we boiled were a multiple of 20000
+        && lastAc.nbrLollipops == this.lollipopsInTheCauldron // We didn't add any lollipop while boiling
+        && lastAc.nbrCandies == this.candiesInTheCauldron // We didn't add any candy while boiling
+        && lastAc.timer >= 15 && lastAc.timer < 32 // It was boiling when we stopped boiling
+        /* LAST LAST ACTION */
+        && lastLastAc.type == "mix" // Last last action was mixing
+        /* LAST LAST LAST ACTION */
+        && lastLastLastAc.type == "boil" // Last last last action was boiling
+        && lastLastLastAc.nbrLollipops > 0 // We boiled at least one lollipop
+        && lastLastLastAc.nbrLollipops % 10000 == 0 // The lollipops we boiled were a multiple of 10000
+        && lastLastLastAc.timer >= 15 && lastLastLastAc.timer < 32 // It was boiling when we stopped boiling
+        /* STUFF BETWEEN ACTIONS */
+        && lastAc.nbrLollipops == 2 * lastLastLastAc.nbrLollipops){ // We boiled at the end twice more lollipops than what we boiled at first
+            potions.getPotions(potions.list.beserk, Math.floor(lastAc.nbrLollipops/20000)); // We add the potions to our stock
+            resultsList.push({type:"berserk", nbr:Math.floor(lastAc.nbrLollipops/20000)}); // We add the result to the list
+        }
         
         // Check for invulnerability potion
         if(lastAc.type == "mix" // Last action was mixing
@@ -491,7 +514,7 @@ var cauldron = {
         && lastAc.nbrCandies > 0 // We mixed at least one candy
         && lastAc.nbrCandies % 2000 == 0 // The candies we mixed were a multiple of 2000
         && lastAc.nbrCandies == this.candiesInTheCauldron && lastAc.nbrLollipops == this.lollipopsInTheCauldron // We didn't add anything while mixing
-        && lastAc.timer >= 60){ // It took >= 60 seconds
+        && lastAc.timer >= 30){ // It took >= 60 seconds
             potions.getPotions(potions.list.invulnerability, Math.floor(lastAc.nbrCandies/2000)); // We add the potions to our stock
             resultsList.push({type:"invulnerability", nbr:Math.floor(lastAc.nbrCandies/2000)}); // We add the result to the list
         }
@@ -1079,10 +1102,10 @@ var cauldron = {
 "",
 "Put 10000",
 "lollipops in your",
-"cauldron. Do not",
-"add any candy, or",
-"your potion will",
-"be a failure."
+"cauldron. Do NOT",
+"even think about",
+"adding candy.",
+"Not a single one."
 ],
 
     asciiTurtlePotionP4 :
