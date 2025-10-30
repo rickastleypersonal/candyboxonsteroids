@@ -50,7 +50,6 @@ var inventory = {
             htmlInteraction.showButton("hardmode");
         }
         else{
-            htmlInteraction.setInnerHtml("inventory_won1", "<pre>" + this.asciiNoObject + "</pre>");
             htmlInteraction.setInnerHtml("inventory_won2", "<pre>" + this.asciiNoObject + "</pre>");
             htmlInteraction.hideButton("hardmode");
         }
@@ -154,8 +153,8 @@ var inventory = {
 
     asciiCrownOfCalm : "       \n\
       _.+._\n\
-    (^\/^\/^)\n\
-     \@*@*@/\n\
+    (^\\/^\\/^)\n\
+     \\@*@*@/\n\
      {_____}",
    
     asciiWon2 : "Bravo !\nYou won\nthe game :)\nYou now have\nall the\ncandies in\nthe world.",
